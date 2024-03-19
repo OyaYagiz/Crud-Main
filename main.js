@@ -33,8 +33,19 @@ function addItem(e){
        </div>
 
        `;
+        const deleteBtn = element.querySelector(".delete-btn");
+        deleteBtn.addEventListener("click", deleteItem);
+        const editBtn = element.querySelector(".edit-btn");
+        editBtn.addEventListener("click", editItem);
 
-        
+        list.appendChild(element);
     }
 }
  
+function deleteItem(){
+    console.log("silindi");
+}
+
+function editItem(){
+    console.log("düzenleme işlemi");
+}
