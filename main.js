@@ -1,7 +1,8 @@
 //Gerekli HTML Elementlerini Seç
 const form = document.querySelector(".grocery-form");
 const grocery = document.getElementById("grocery");
-console.log(grocery);
+const container = document.querySelector(".grocery-container");
+const list = document.querySelector(".grocery-list");
 
 //Düzenleme Seçenekleri
 let editFlag = false;
@@ -20,7 +21,20 @@ function addItem(e){
        let attr = document.createAttribute("data-id");
        attr.value = id;
        element.setAttributeNode(attr);
-       console.log(element);
+       element.classList.add("grocery-item");
+       element.innerHTML = `
+       <p class="title">${value}</p>
+       <div class="btn-container">
+           <button type="button" class="edit-btn"><i class="fa-solid fa-pen-to-square"></i>
+           </button>
+           <button type="button" class="delete-btn">
+               <i class="fa-solid fa-trash-can"></i>
+           </button>
+       </div>
+
+       `;
+
+        
     }
 }
  
