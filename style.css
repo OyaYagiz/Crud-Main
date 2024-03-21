@@ -161,7 +161,7 @@ p{
 
 .grocery-container{
     margin-top: 32px;
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 .show-container{
     visibility: visible;
